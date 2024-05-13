@@ -3,7 +3,7 @@ body {
 }
 
 nav {
-    position: fixed;
+    position: sticky;
     top: 0;
     right: 0;
     left: 0;
@@ -11,6 +11,7 @@ nav {
     justify-content: end;
     gap: 550px;
     box-shadow: 4px 2px 4px 0px;
+    z-index: 1;
 }
 
 .bgToggle {
@@ -80,6 +81,52 @@ input:checked+.slider:before {
 
 .slider.round {
     border-radius: 34px;
+}
+
+.quizContainer {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+
+#previous, #next {
+    padding: 10px;
+    font-weight: 600;
+    font-size: 12px;
+    transition: 0.5s ease;
+    border-radius: 5px;
+    border: none;
+    background-color: #6495ed;
+}
+
+#previous:hover, #next:hover {
+    background-color: #6445ed;
+}
+
+.questionBtn {
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    margin: 0 2px;
+    background-color: #6495ed;
+    border-radius: 20%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.questionBtn:hover {
+    background-color: #6445ed;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
 }
 
 @media screen and (max-width: 811px) {
